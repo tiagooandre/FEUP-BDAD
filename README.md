@@ -1,4 +1,4 @@
-# feup-bdad
-Databases Curricular Unit - 2019/2020
-
-Grupo 207 - Turma 2 Grupo 7
+Projeto realizado por:
+  - Gonçalo Teixeira [https://github.com/skdGT]
+  - Mª Francisca Almeida
+  - Tiago Pinto
