@@ -1,0 +1,16 @@
+π nr Aluno								-- 1
+π cod,design σcurso='AC' Cadeira					-- 2
+π Nome (Aluno ⨝ Prof)							-- 3	
+π Aluno.Nome Aluno - π Aluno.Nome (Aluno ⨝ Prof)			-- 4
+π Nome Aluno ∪ π Nome Prof						-- 5
+Aluno ⨝ σcod='TS1' Prova						-- 6
+π Nome (Aluno ⨝Prova.nr=Aluno.nr (σcurso='IS' (Prova ⨝ Cadeira)))	-- 7
+π Nome, cod (Aluno ⨝ σ nota >= 10 Prova))÷(π cod σ curso='IS' Cadeira	-- 8
+γ max(nota)->maxNota Prova						-- 9
+γ avg(nota)->avgNota Prova						-- 10
+γ count(Nome)->number Aluno						-- 11
+γ curso; count(cod)->count (Cadeira)					-- 12
+γ Prova.nr; count(Prova.nr)->count Prova				-- 13
+γ Prova.nr; avg(Prova.nota)->media Prova				-- 14
+π Aluno.Nome, nota (Aluno ⨝ γ nr; avg(nota)->nota (σnota ≥ 9.5 Prova))	-- 15
+π cod, nota, Nome ((γ cod; max(nota)->nota (Prova) ⨝ Prova) ⨝ Aluno)	-- 16
